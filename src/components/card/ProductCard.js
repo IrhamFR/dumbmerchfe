@@ -5,7 +5,7 @@ import convertRupiah from "rupiah-format";
 
 export default function ProductCard({ item }) {
   return (
-    <Link to={`/product/` + item.id} style={{ textDecoration: "none" }}>
+    <Link to={`/product/` + item.id}>
       <div className="card-product mt-3">
         <img src={item.image} className="img-fluid img-rounded" alt={item.name} />
         <div className="p-2">
