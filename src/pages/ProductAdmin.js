@@ -5,7 +5,7 @@ import ShowMoreText from 'react-show-more-text';
 import rupiahFormat from 'rupiah-format';
 import { useQuery, useMutation } from 'react-query';
 
-import Navbar from '../components/NavbarAdmin';
+import Navbar from '../components/Navbar';
 // import NavbarAdmin from '../components/NavbarAdmin';
 import DeleteData from '../components/modal/DeleteData';
 import AddProduct from '../components/modal/AddProduct';
