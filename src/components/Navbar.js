@@ -32,6 +32,7 @@ export default function Navbar(props) {
                 <NavbarComp.Toggle aria-controls="basic-navbar-nav" />
                 <NavbarComp.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
+                    <Nav.Link as={Link} to="/product-admin" className={props?.title == 'Product admin' ? `text-navbar-active` : `text-navbar`}>Atur Barang</Nav.Link>
                         <Nav.Link as={Link} to="/profile" className={props?.title == 'Profile' ? `text-navbar-active` : `text-navbar`}>Profile</Nav.Link>
                         <Nav.Link onClick={logout} className="text-navbar">Logout</Nav.Link>
                     </Nav>
