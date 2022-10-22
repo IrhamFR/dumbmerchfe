@@ -84,11 +84,11 @@ export default function Product() {
             //     <ProductCard item={item} key={index} />
             //   ))}
             // </Masonry>
-            <Row md={8} style={{ width: "250px", height: "400px" }}>
+            <Col md={8} style={{ width: "250px", height: "400px" }}>
                 {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
               ))}
-             </Row>
+             </Col>
           ) : (
             <Col>
               <div className="text-center pt-5">
