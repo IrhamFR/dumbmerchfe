@@ -5,7 +5,8 @@ import ShowMoreText from 'react-show-more-text';
 import rupiahFormat from 'rupiah-format';
 import { useQuery, useMutation } from 'react-query';
 
-import NavbarAdmin from '../components/NavbarAdmin';
+import Navbar from '../components/NavbarAdmin';
+// import NavbarAdmin from '../components/NavbarAdmin';
 import DeleteData from '../components/modal/DeleteData';
 import AddProduct from '../components/modal/AddProduct';
 import imgEmpty from '../assets/empty.svg';
@@ -71,7 +72,8 @@ export default function ProductAdmin() {
 
   return (
     <>
-      <NavbarAdmin title={title} />
+      <Navbar title={title} />
+      {/* <NavbarAdmin title={title} /> */}
       <hr/>
       <Container className="py-5">
         <Row>
