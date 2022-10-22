@@ -79,7 +79,6 @@ export default function Product() {
               breakpointCols={breakpointColumnsObj}
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
-              style={{ width: "150px", height: "200px" }}
             >
               {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
