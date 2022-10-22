@@ -96,15 +96,14 @@ export default function AddProductAdmin({ show, addClose, setAddProduct }) {
 
       if (response.data.code == 200) {
         navigate("/product-admin");
-      } else {
-        const alert = (
-          <Alert variant="danger" className="py-1">
-            File harus format PNG dengan size 100kb
-          </Alert>
-        );
-        setMessage(alert);
       }
     } catch (error) {
+      const alert = (
+        <Alert variant="danger" className="py-1">
+          File harus format PNG dengan size 100kb
+        </Alert>
+      );
+      setMessage(alert);
       console.log(error);
     }
   });
