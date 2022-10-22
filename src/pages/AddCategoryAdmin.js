@@ -16,7 +16,7 @@ export default function AddCategoryAdmin() {
   const [category, setCategory] = useState('');
 
   const title = 'Category admin';
-  document.title = 'DumbMerch | ' + title;
+  document.title = 'Nutech | ' + title;
 
   const handleChange = (e) => {
     setCategory(e.target.value);
@@ -48,6 +48,7 @@ export default function AddCategoryAdmin() {
   return (
     <>
       <NavbarAdmin title={title} />
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col xs="12">

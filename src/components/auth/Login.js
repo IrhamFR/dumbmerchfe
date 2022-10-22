@@ -10,7 +10,7 @@ export default function Login() {
   let navigate = useNavigate();
 
   const title = "Login";
-  document.title = "DumbMerch | " + title;
+  document.title = "Nutech | " + title;
 
   const [state, dispatch] = useContext(UserContext);
 
@@ -58,7 +58,7 @@ export default function Login() {
 
         // Status check
         if (response.data.data.status === "admin") {
-          navigate("/complain-admin");
+          navigate("/product-admin");
         } else {
           navigate("/");
         }

@@ -7,7 +7,7 @@ import { useQuery, useMutation } from 'react-query';
 
 import NavbarAdmin from '../components/NavbarAdmin';
 import DeleteData from '../components/modal/DeleteData';
-
+import AddProduct from '../components/modal/AddProduct';
 import imgEmpty from '../assets/empty.svg';
 
 import { API } from '../config/api';
@@ -16,7 +16,10 @@ export default function ProductAdmin() {
   let navigate = useNavigate();
 
   const title = 'Product admin';
-  document.title = 'DumbMerch | ' + title;
+  document.title = 'Nutech | ' + title;
+
+  const [idProduct, setIdProduct] = useState(null);
+  const [addProduct, setAddProduct] = useState(null);
 
   const [idDelete, setIdDelete] = useState(null);
   const [confirmDelete, setConfirmDelete] = useState(null);
@@ -25,13 +28,19 @@ export default function ProductAdmin() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [shows, setShows] = useState(false);
+  const addClose = () => setShows(false);
+  const addShow = () => setShows(true);
+
   let { data: products, refetch } = useQuery('productsCache', async () => {
     const response = await API.get('/products');
     return response.data.data;
   });
 
-  const addProduct = () => {
-    navigate('/add-product');
+  const handleProduct = () => {
+    setIdProduct();
+    addShow();
+    // navigate('/add-product/');
   };
 
   const handleUpdate = (id) => {
@@ -63,7 +72,7 @@ export default function ProductAdmin() {
   return (
     <>
       <NavbarAdmin title={title} />
-
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col xs="6">
@@ -74,6 +83,11 @@ export default function ProductAdmin() {
               onClick={addProduct}
               className="btn-dark"
               style={{ width: '100px' }}
+              onClick={() => {
+                handleProduct();
+              }}
+              className="btn-sm btn-danger"
+              style={{ width: '135px' }}
             >
               Add
             </Button>
@@ -86,12 +100,13 @@ export default function ProductAdmin() {
                     <th width="1%" className="text-center">
                       No
                     </th>
-                    <th>Photo</th>
-                    <th>Product Name</th>
-                    <th>Product Desc</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Action</th>
+                    <th className='dflex text-center'>Foto Barang</th>
+                    <th className='dflex text-center'>Nama Barang</th>
+                    {/* <th>Product Desc</th> */}
+                    <th className='dflex text-center'>Harga Beli</th>
+                    <th className='dflex text-center'>Harga Jual</th>
+                    <th className='dflex text-center'>Qty</th>
+                    <th className='dflex text-center'>Pilihan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -110,25 +125,14 @@ export default function ProductAdmin() {
                         />
                       </td>
                       <td className="align-middle">{item.name}</td>
-                      <td className="align-middle">
-                        <ShowMoreText
-                          /* Default options */
-                          lines={1}
-                          more="show"
-                          less="hide"
-                          className="content-css"
-                          anchorClass="my-anchor-css-class"
-                          expanded={false}
-                          width={280}
-                        >
-                          {item.desc}
-                        </ShowMoreText>
+                      <td className="align-middle dflex text-center">
+                        {rupiahFormat.convert(item.buy)}
                       </td>
-                      <td className="align-middle">
-                        {rupiahFormat.convert(item.price)}
+                      <td className="align-middle dflex text-center">
+                        {rupiahFormat.convert(item.sell)}
                       </td>
-                      <td className="align-middle">{item.qty}</td>
-                      <td className="align-middle">
+                      <td className="align-middle dflex text-center">{item.qty}</td>
+                      <td className="align-middle dflex text-center">
                         <Button
                           onClick={() => {
                             handleUpdate(item.id);
@@ -166,6 +170,11 @@ export default function ProductAdmin() {
           </Col>
         </Row>
       </Container>
+      <AddProduct
+        // setAddProduct={setAddProduct}
+        show={shows}
+        addClose={addClose}
+      />
       <DeleteData
         setConfirmDelete={setConfirmDelete}
         show={show}

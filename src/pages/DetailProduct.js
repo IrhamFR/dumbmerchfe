@@ -50,7 +50,8 @@ export default function DetailProduct() {
       const data = {
         productId: product.id,
         sellerId: product.user.id,
-        price: product.price,
+        buy: product.buy,
+        // sell: product.sell,
       };
 
       const body = JSON.stringify(data);
@@ -89,6 +90,7 @@ export default function DetailProduct() {
   return (
     <div>
       <Navbar />
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col md="2"></Col>
@@ -100,16 +102,16 @@ export default function DetailProduct() {
             <div className="text-content-product-detail">
               Stock : {product?.qty}
             </div>
-            <p className="text-content-product-detail mt-4">{product?.desc}</p>
+            {/* <p className="text-content-product-detail mt-4">{product?.desc}</p> */}
             <div className="text-price-product-detail text-end mt-4">
-              {convertRupiah.convert(product?.price)}
+              {convertRupiah.convert(product?.buy)}
             </div>
             <div className="d-grid gap-2 mt-5">
               <button
                 onClick={(e) => handleBuy.mutate(e)}
                 className="btn btn-buy"
               >
-                Buy
+                Beli
               </button>
             </div>
           </Col>

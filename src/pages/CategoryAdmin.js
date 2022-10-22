@@ -14,7 +14,7 @@ export default function CategoryAdmin() {
   let navigate = useNavigate();
 
   const title = 'Category admin';
-  document.title = 'DumbMerch | ' + title;
+  document.title = 'Nutech | ' + title;
 
   const [idDelete, setIdDelete] = useState(null);
   const [confirmDelete, setConfirmDelete] = useState(null);
@@ -61,7 +61,7 @@ export default function CategoryAdmin() {
   return (
     <>
       <NavbarAdmin title={title} />
-
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col>

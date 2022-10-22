@@ -12,7 +12,7 @@ import { API } from "../config/api";
 
 export default function UpdateProductAdmin() {
   const title = "Product admin";
-  document.title = "DumbMerch | " + title;
+  document.title = "Nutech | " + title;
 
   let navigate = useNavigate();
   const { id } = useParams();
@@ -24,8 +24,9 @@ export default function UpdateProductAdmin() {
   const [form, setForm] = useState({
     image: "",
     name: "",
-    desc: "",
-    price: "",
+    // desc: "",
+    buy: "",
+    sell: "",
     qty: "",
   }); //Store product data
 
@@ -50,8 +51,9 @@ export default function UpdateProductAdmin() {
       setForm({
         ...form,
         name: products.name,
-        desc: products.desc,
-        price: products.price,
+        // desc: products.desc,
+        buy: products.buy,
+        sell: products.sell,
         qty: products.qty,
       });
       setProduct(products);
@@ -111,8 +113,9 @@ export default function UpdateProductAdmin() {
         formData.set("image", form?.image[0], form?.image[0]?.name);
       }
       formData.set("name", form.name);
-      formData.set("desc", form.desc);
-      formData.set("price", form.price);
+      // formData.set("desc", form.desc);
+      formData.set("buy", form.buy);
+      formData.set("sell", form.sell);
       formData.set("qty", form.qty);
       formData.set("categoryId", categoryId);
       console.log(categoryId);
@@ -145,6 +148,7 @@ export default function UpdateProductAdmin() {
   return (
     <>
       <NavbarAdmin title={title} />
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col xs="12">
@@ -177,28 +181,36 @@ export default function UpdateProductAdmin() {
               </label>
               <input
                 type="text"
-                placeholder="Product Name"
+                placeholder="Nama Barang"
                 name="name"
                 onChange={handleChange}
                 value={form?.name}
                 className="input-edit-category mt-4"
               />
-              <textarea
+              {/* <textarea
                 placeholder="Product Desc"
                 name="desc"
                 onChange={handleChange}
                 value={form?.desc}
                 className="input-edit-category mt-4"
                 style={{ height: "130px" }}
-              ></textarea>
+              ></textarea> */}
               <input
                 type="number"
-                placeholder="Price (Rp.)"
-                name="price"
+                placeholder="Harga Beli (Rp.)"
+                name="buy"
                 onChange={handleChange}
-                value={form?.price}
+                value={form?.buy}
                 className="input-edit-category mt-4"
               />
+                <input
+                  type="number"
+                  placeholder="Harga Jual (Rp.)"
+                  name="sell"
+                  onChange={handleChange}
+                  value={form?.sell}
+                  className="input-edit-category mt-4"
+                />
               <input
                 type="number"
                 placeholder="Stock"

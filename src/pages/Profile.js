@@ -35,6 +35,7 @@ export default function Profile() {
   return (
     <>
       <Navbar title={title} />
+      <hr/>
       <Container className="my-5">
         <Row>
           <Col md="6">
@@ -54,7 +55,7 @@ export default function Profile() {
                 <div className="profile-header">Email</div>
                 <div className="profile-content">{state.user.email}</div>
 
-                <div className="profile-header">Phone</div>
+                {/* <div className="profile-header">Phone</div>
                 <div className="profile-content">
                   {profile?.phone ? profile?.phone : "-"}
                 </div>
@@ -67,7 +68,7 @@ export default function Profile() {
                 <div className="profile-header">Address</div>
                 <div className="profile-content">
                   {profile?.address ? profile?.address : "-"}
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Col>
@@ -125,7 +126,7 @@ export default function Profile() {
                               fontWeight: "300",
                             }}
                           >
-                            Price : {convertRupiah.convert(item.price)}
+                            Price : {convertRupiah.convert(item.buy)}
                           </div>
 
                           <div
@@ -135,7 +136,7 @@ export default function Profile() {
                               fontWeight: "700",
                             }}
                           >
-                            Sub Total : {convertRupiah.convert(item.price)}
+                            Sub Total : {convertRupiah.convert(item.buy)}
                           </div>
                         </Col>
                         <Col xs="3">

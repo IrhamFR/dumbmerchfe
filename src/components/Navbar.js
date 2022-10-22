@@ -7,7 +7,8 @@ import {
 
 import { UserContext } from '../context/userContext'
 
-import ImgDumbMerch from '../assets/DumbMerch.png'
+// import ImgDumbMerch from '../assets/DumbMerch.png'
+import Logo from '../assets/Logo.png'
 
 export default function Navbar(props) {
     const [state, dispatch] = useContext(UserContext)
@@ -26,12 +27,11 @@ export default function Navbar(props) {
         <NavbarComp expand="lg">
             <Container>
                 <NavbarComp.Brand as={Link} to="/">
-                    <img src={ImgDumbMerch} className="img-fluid" style={{ width: '60px', height: '60px' }} />
+                    <img src={Logo} className="img-fluid" style={{ width: '200px', height: '80px' }} />
                 </NavbarComp.Brand>
                 <NavbarComp.Toggle aria-controls="basic-navbar-nav" />
                 <NavbarComp.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link as={Link} to="/complain" className={props?.title == 'Complain' ? `text-navbar-active` : `text-navbar`}>Complain</Nav.Link>
                         <Nav.Link as={Link} to="/profile" className={props?.title == 'Profile' ? `text-navbar-active` : `text-navbar`}>Profile</Nav.Link>
                         <Nav.Link onClick={logout} className="text-navbar">Logout</Nav.Link>
                     </Nav>

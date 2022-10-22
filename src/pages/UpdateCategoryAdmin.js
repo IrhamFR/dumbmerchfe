@@ -9,7 +9,7 @@ import { API } from '../config/api';
 
 export default function UpdateCategoryAdmin() {
   const title = 'Category admin';
-  document.title = 'DumbMerch | ' + title;
+  document.title = 'Nutech | ' + title;
 
   let navigate = useNavigate();
   const { id } = useParams();
@@ -57,6 +57,7 @@ export default function UpdateCategoryAdmin() {
   return (
     <>
       <NavbarAdmin title={title} />
+      <hr/>
       <Container className="py-5">
         <Row>
           <Col xs="12">

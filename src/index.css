@@ -1,6 +1,6 @@
 body {
-  background-color: #0b0b0b !important;
-  color: #ffffff !important;
+  color: #0b0b0b !important;
+  background-color: #ffffff !important;
 }
 
 /* SCROLLBAR */
@@ -34,7 +34,7 @@ body {
 .text-auth-header {
   font-style: normal;
   font-weight: 400;
-  font-size: 56px;
+  font-size: 30px;
   line-height: 76px;
 }
 
@@ -74,15 +74,16 @@ body {
   font-size: 18px !important;
   line-height: 25px !important;
 
-  color: #b7b7b7 !important;
-}
+  background: #e6e6e6 !important;
+  color: #6a6a6a !important;
+}   
 
 .btn-register:hover {
   color: #e6e6e6 !important;
 }
 
 .btn-register:active {
-  color: #b7b7b7 !important;
+  color: #6a6a6a !important;
 }
 
 input:focus,
@@ -93,7 +94,7 @@ textarea:focus {
 }
 
 .card-auth {
-  background: #181818;
+  background: #6a6a6a !important;
   border-radius: 10px;
   max-width: 416px;
 }
@@ -111,7 +112,7 @@ textarea:focus {
   font-weight: 700 !important;
   font-size: 18px !important;
   line-height: 25px !important;
-  color: #ffffff !important;
+  color: #0b0b0b !important;
 }
 
 .text-navbar-active {
@@ -310,7 +311,7 @@ textarea:focus {
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  color: #ffffff;
+  color: #262626;
   margin-bottom: 27px;
 }
 

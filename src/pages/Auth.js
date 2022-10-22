@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { UserContext } from "../context/userContext";
 
-import ImgDumbMerch from "../assets/DumbMerch.png";
+// import ImgDumbMerch from "../assets/DumbMerch.png";
+import Logo from "../assets/Logo.png"
 
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
@@ -32,18 +33,17 @@ export default function Auth() {
   };
 
   return (
-    <div className="bg-black">
+    <div>
       <Container>
         <Row className="vh-100 d-flex align-items-center">
           <Col md="6">
-            <img src={ImgDumbMerch} className="img-fluid" style={{ width: "264px", height: "264px" }} alt="brand" />
-            <div className="text-auth-header mt-4">Easy, Fast and Reliable</div>
-            <p className="text-auth-parag mt-3">
-              Go shopping for merchandise, just go to dumb merch <br /> shopping. the biggest merchandise in{" "}
-              <b>Indonesia</b>
-            </p>
+            <img src={Logo} className="img-fluid" style={{ width: "564px", height: "230px" }} alt="brand" />
+            <div className="text-auth-header mt-4">Simplifying Mobility with Integration</div>
+            {/* <p className="text-auth-parag mt-3">
+              Simplifying Mobility with Integration
+            </p> */}
             <div className="mt-5">
-              <button onClick={switchLogin} className="btn btn-login px-5">
+              <button onClick={switchLogin} className="btn btn-login px-5 me-2">
                 Login
               </button>
               <button onClick={switchRegister} className="btn btn-register px-5">

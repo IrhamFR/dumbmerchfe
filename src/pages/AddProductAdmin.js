@@ -9,8 +9,8 @@ import { API } from "../config/api";
 
 export default function AddProductAdmin() {
   // console.clear();
-  const title = "Product admin";
-  document.title = "DumbMerch | " + title;
+  const title = "Daftar Barang";
+  document.title = "Nutech | " + title;
 
   let navigate = useNavigate();
 
@@ -20,8 +20,9 @@ export default function AddProductAdmin() {
   const [form, setForm] = useState({
     image: "",
     name: "",
-    desc: "",
-    price: "",
+    // desc: "",
+    buy: "",
+    sell: "",
     qty: "",
   }); //Store product data
 
@@ -82,8 +83,9 @@ export default function AddProductAdmin() {
       const formData = new FormData();
       formData.set("image", form.image[0], form.image[0].name);
       formData.set("name", form.name);
-      formData.set("desc", form.desc);
-      formData.set("price", form.price);
+      // formData.set("desc", form.desc);
+      formData.set("buy", form.buy);
+      formData.set("sell", form.sell);
       formData.set("qty", form.qty);
       formData.set("categoryId", categoryId);
 
@@ -118,7 +120,7 @@ export default function AddProductAdmin() {
                 <div>
                   <img
                     src={preview}
-                    style={{
+                    stayle={{
                       maxWidth: "150px",
                       maxHeight: "150px",
                       objectFit: "cover",
@@ -131,6 +133,7 @@ export default function AddProductAdmin() {
                 type="file"
                 id="upload"
                 name="image"
+                accept="image"
                 hidden
                 onChange={handleChange}
               />
@@ -144,17 +147,24 @@ export default function AddProductAdmin() {
                 onChange={handleChange}
                 className="input-edit-category mt-4"
               />
-              <textarea
+              {/* <textarea
                 placeholder="Product Desc"
                 name="desc"
                 onChange={handleChange}
                 className="input-edit-category mt-4"
                 style={{ height: "130px" }}
-              ></textarea>
+              ></textarea> */}
               <input
                 type="number"
-                placeholder="Price (Rp.)"
-                name="price"
+                placeholder="Harga Beli (Rp.)"
+                name="buy"
+                onChange={handleChange}
+                className="input-edit-category mt-4"
+              />
+              <input
+                type="number"
+                placeholder="Harga Jual (Rp.)"
+                name="sell"
                 onChange={handleChange}
                 className="input-edit-category mt-4"
               />

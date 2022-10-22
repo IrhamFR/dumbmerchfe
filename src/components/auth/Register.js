@@ -7,7 +7,7 @@ import { API } from "../../config/api";
 
 export default function Register() {
   const title = "Register";
-  document.title = "DumbMerch | " + title;
+  document.title = "Nutech | " + title;
 
   const [state, dispatch] = useContext(UserContext);
 
