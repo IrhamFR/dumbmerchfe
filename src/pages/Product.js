@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
-import { Container, Row, Col, InputGroup, Form } from 'react-bootstrap';
+import { Container, Row, Col, InputGroup, Form, Card } from 'react-bootstrap';
 import {BiSearchAlt} from 'react-icons/bi'
 import { UserContext } from '../context/userContext';
 import { useQuery } from 'react-query';
@@ -75,15 +75,20 @@ export default function Product() {
         
         <Row className="my-4">
           {products?.length !== 0 ? (
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
-            >
-              {products?.map((item, index) => (
+            // <Masonry
+            //   breakpointCols={breakpointColumnsObj}
+            //   className="my-masonry-grid"
+            //   columnClassName="my-masonry-grid_column"
+            // >
+            //   {products?.map((item, index) => (
+            //     <ProductCard item={item} key={index} />
+            //   ))}
+            // </Masonry>
+              <Card>
+                {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
               ))}
-            </Masonry>
+            </Card>
           ) : (
             <Col>
               <div className="text-center pt-5">
