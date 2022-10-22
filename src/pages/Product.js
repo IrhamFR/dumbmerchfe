@@ -75,20 +75,20 @@ export default function Product() {
         
         <Row className="my-4">
           {products?.length !== 0 ? (
-            // <Masonry
-            //   breakpointCols={breakpointColumnsObj}
-            //   className="my-masonry-grid"
-            //   columnClassName="my-masonry-grid_column"
-            // >
-            //   {products?.map((item, index) => (
-            //     <ProductCard item={item} key={index} />
-            //   ))}
-            // </Masonry>
-            <Col md={8} style={{ width: "250px", height: "400px" }}>
-                {products?.map((item, index) => (
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
               ))}
-             </Col>
+            </Masonry>
+            // <Col md={8} style={{ width: "250px", height: "400px" }}>
+            //     {products?.map((item, index) => (
+            //     <ProductCard item={item} key={index} />
+            //   ))}
+            //  </Col>
           ) : (
             <Col>
               <div className="text-center pt-5">
