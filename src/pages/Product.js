@@ -84,7 +84,7 @@ export default function Product() {
             //     <ProductCard item={item} key={index} />
             //   ))}
             // </Masonry>
-            <Row md={2}>
+            <Row md={2} style={{ width: "250px", height: "300px" }}>
                 {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
               ))}
