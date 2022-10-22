@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button, Modal, } from "react-bootstrap";
+import { Container, Row, Col, Button, Modal, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useMutation } from "react-query";
 import { API } from "../../config/api";
@@ -65,6 +65,8 @@ export default function AddProductAdmin({ show, addClose, setAddProduct }) {
       setPreview(url);
     }
   };
+
+  const [message, setMessage] = useState(null);
 
   const handleSubmit = useMutation(async (e) => {
     try {
