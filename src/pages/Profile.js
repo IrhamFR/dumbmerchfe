@@ -16,7 +16,7 @@ import { API } from "../config/api";
 
 export default function Profile() {
   const title = "Profile";
-  document.title = "DumbMerch | " + title;
+  document.title = "Nutech | " + title;
 
   const [state] = useContext(UserContext);
 
