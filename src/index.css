@@ -165,7 +165,6 @@ textarea:focus {
   display: flex;
   margin-left: -10px; /* gutter size offset */
   width: 1100px;
-  height: 1400px;
 }
 .my-masonry-grid_column {
   padding-left: 10px; /* gutter size */
