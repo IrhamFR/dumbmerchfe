@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import convertRupiah from "rupiah-format";
 import { useQuery, useMutation } from "react-query";
 
@@ -36,6 +36,8 @@ export default function DetailProduct() {
       document.body.removeChild(scriptTag);
     };
   }, []);
+
+  const [message, setMessage] = useState(null);
 
   const handleBuy = useMutation(async (e) => {
     try {
