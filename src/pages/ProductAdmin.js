@@ -78,7 +78,7 @@ export default function ProductAdmin() {
       <Container className="py-5">
         <Row>
           <Col xs="6">
-            <div className="text-header-category mb-4">List Product</div>
+            <div className="text-header-product mb-4">List Barang</div>
           </Col>
           <Col xs="6" className="text-end">
             <Button
