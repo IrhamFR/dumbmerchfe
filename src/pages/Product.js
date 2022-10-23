@@ -82,7 +82,7 @@ export default function Product() {
               columnClassName="my-masonry-grid_column"
             >
               {products?.map((item, index) => (
-                <ProductCard item={item} key={index} />
+                <ProductCard item={item} key={index} products={dataFilter}/>
               ))}
             </Masonry>
             // <Col md={8} style={{ width: "250px", height: "400px" }}>
