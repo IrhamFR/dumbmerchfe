@@ -19,12 +19,13 @@ export default function Product() {
 
   const [dataFilter, setDataFilter] = useState([])
   
-  let { data: products } = useQuery('productsCache', async () => {
+  const { data: products } = useQuery('productsCache', async () => {
     const response = await API.get('/products');
+    console.log("response : ", response);
     return response.data.data;
   });
 
-  console.log(products);
+  // console.log(products);
 
 
   function handleChangeLiterature(e) {
