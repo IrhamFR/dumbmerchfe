@@ -25,8 +25,8 @@ export default function UpdateProductAdmin() {
     image: "",
     name: "",
     // desc: "",
-    buy: "",
     sell: "",
+    buy: "",
     qty: "",
   }); //Store product data
 
@@ -52,8 +52,8 @@ export default function UpdateProductAdmin() {
         ...form,
         name: products.name,
         // desc: products.desc,
-        buy: products.buy,
         sell: products.sell,
+        buy: products.buy,
         qty: products.qty,
       });
       setProduct(products);
@@ -114,8 +114,8 @@ export default function UpdateProductAdmin() {
       }
       formData.set("name", form.name);
       // formData.set("desc", form.desc);
-      formData.set("buy", form.buy);
       formData.set("sell", form.sell);
+      formData.set("buy", form.buy);
       formData.set("qty", form.qty);
       formData.set("categoryId", categoryId);
       console.log(categoryId);
