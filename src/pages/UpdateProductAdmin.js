@@ -152,7 +152,7 @@ export default function UpdateProductAdmin() {
       <Container className="py-5">
         <Row>
           <Col xs="12">
-            <div className="text-header-category mb-4">Update Product</div>
+            <div className="text-header-product mb-4">Update Product</div>
           </Col>
           <Col xs="12">
             <form onSubmit={(e) => handleSubmit.mutate(e)}>
