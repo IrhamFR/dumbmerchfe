@@ -185,7 +185,7 @@ export default function UpdateProductAdmin() {
                 name="name"
                 onChange={handleChange}
                 value={form?.name}
-                className="input-edit-category mt-4"
+                className="input-edit-category mt-2"
               />
               {/* <textarea
                 placeholder="Product Desc"
@@ -220,7 +220,7 @@ export default function UpdateProductAdmin() {
                 className="input-edit-category mt-4"
               />
 
-              <div className="card-form-input mt-4 px-2 py-1 pb-2">
+              {/* <div className="card-form-input mt-4 px-2 py-1 pb-2">
                 <div
                   className="text-secondary mb-1"
                   style={{ fontSize: "15px" }}
@@ -238,7 +238,7 @@ export default function UpdateProductAdmin() {
                       <span className="ms-2">{item?.name}</span>
                     </label>
                   ))}
-              </div>
+              </div> */}
 
               <div className="d-grid gap-2 mt-4">
                 <Button type="submit" variant="success" size="md">
