@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 import convertRupiah from "rupiah-format";
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, products }) {
+
+  console.log(products);
+
   return (
     <Link to={`/product/` + item.id} style={{ textDecoration: "none"}}>
       <div className="card-product mt-3">
