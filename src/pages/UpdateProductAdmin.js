@@ -198,7 +198,7 @@ export default function UpdateProductAdmin() {
               <input
                 type="number"
                 placeholder="Harga Beli (Rp.)"
-                name="buy"
+                name="sell"
                 onChange={handleChange}
                 value={form?.buy}
                 className="input-edit-category mt-4"
@@ -206,7 +206,7 @@ export default function UpdateProductAdmin() {
                 <input
                   type="number"
                   placeholder="Harga Jual (Rp.)"
-                  name="sell"
+                  name="buy"
                   onChange={handleChange}
                   value={form?.sell}
                   className="input-edit-category mt-4"

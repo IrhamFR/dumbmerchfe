@@ -169,14 +169,14 @@ export default function AddProductAdmin({ show, addClose, setAddProduct }) {
                         <input
                             type="number"
                             placeholder="Harga Beli (Rp.)"
-                            name="buy"
+                            name="sell"
                             onChange={handleChange}
                             className="input-edit-category mt-4"
                         />
                         <input
                             type="number"
                             placeholder="Harga Jual (Rp.)"
-                            name="sell"
+                            name="buy"
                             onChange={handleChange}
                             className="input-edit-category mt-4"
                         />

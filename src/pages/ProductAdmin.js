@@ -128,10 +128,10 @@ export default function ProductAdmin() {
                       </td>
                       <td className="align-middle">{item.name}</td>
                       <td className="align-middle dflex text-center">
-                        {rupiahFormat.convert(item.buy)}
+                        {rupiahFormat.convert(item.sell)}
                       </td>
                       <td className="align-middle dflex text-center">
-                        {rupiahFormat.convert(item.sell)}
+                        {rupiahFormat.convert(item.buy)}
                       </td>
                       <td className="align-middle dflex text-center">{item.qty}</td>
                       <td className="align-middle dflex text-center">

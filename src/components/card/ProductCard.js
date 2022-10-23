@@ -14,7 +14,7 @@ export default function ProductCard({ item, products }) {
         <div className="p-2">
           <div className="text-header-product-item">{item.name}</div>
           {/* <div className="text-product-item">{convertRupiah.convert(item.buy)}</div> */}
-          <div className="text-product-item">{convertRupiah.convert(item.sell)}</div>
+          <div className="text-product-item">{convertRupiah.convert(item.buy)}</div>
           <div className="text-product-item">Stock : {item.qty}</div>
         </div>
       </div>
