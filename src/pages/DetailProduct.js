@@ -104,7 +104,7 @@ export default function DetailProduct() {
             </div>
             {/* <p className="text-content-product-detail mt-4">{product?.desc}</p> */}
             <div className="text-price-product-detail text-end mt-4">
-              {convertRupiah.convert(product?.buy)}
+              {convertRupiah.convert(product?.sell)}
             </div>
             <div className="d-grid gap-2 mt-5">
               <button
