@@ -188,7 +188,7 @@ export default function AddProductAdmin({ show, addClose, setAddProduct }) {
                             className="input-edit-category mt-4"
                         />
 
-                        <div className="card-form-input mt-4 px-2 py-1 pb-2">
+                        {/* <div className="card-form-input mt-4 px-2 py-1 pb-2">
                             <div
                             className="text-secondary mb-1"
                             style={{ fontSize: "15px" }}
@@ -205,7 +205,7 @@ export default function AddProductAdmin({ show, addClose, setAddProduct }) {
                                 {item.name}
                             </label>
                             ))}
-                        </div>
+                        </div> */}
 
                         <div className="d-grid gap-2 mt-4">
                             <Button onClick={addClose} type="submit" variant="success" size="md">
