@@ -126,7 +126,7 @@ export default function Profile() {
                               fontWeight: "300",
                             }}
                           >
-                            Price : {convertRupiah.convert(item.sell)}
+                            Price : {convertRupiah.convert(item.buy)}
                           </div>
 
                           <div
@@ -136,7 +136,7 @@ export default function Profile() {
                               fontWeight: "700",
                             }}
                           >
-                            Sub Total : {convertRupiah.convert(item.sell)}
+                            Sub Total : {convertRupiah.convert(item.buy)}
                           </div>
                         </Col>
                         <Col xs="3">
