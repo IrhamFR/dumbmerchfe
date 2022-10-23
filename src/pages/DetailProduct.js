@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import convertRupiah from "rupiah-format";
 import { useQuery, useMutation } from "react-query";
@@ -84,17 +84,6 @@ export default function DetailProduct() {
           alert("you closed the popup without finishing the payment");
         },
       });
-
-      if (response.data.code == 200) {
-        navigate("/profile");
-      } else {
-        const alert = (
-          <Alert variant="danger" className="py-1">
-            Gagal
-          </Alert>
-        );
-        setMessage(alert);
-      }
     } catch (error) {
       console.log(error);
     }
@@ -122,7 +111,7 @@ export default function DetailProduct() {
             <div className="d-grid gap-2 mt-5">
               <button
                 onClick={(e) => handleBuy.mutate(e)}
-                type="submit"
+                as={Link} to="/profile"
                 className="btn btn-buy"
               >
                 Beli
