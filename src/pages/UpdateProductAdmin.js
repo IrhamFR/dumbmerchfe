@@ -3,7 +3,8 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router";
 import { useQuery, useMutation } from "react-query";
 
-import NavbarAdmin from "../components/NavbarAdmin";
+import Navbar from "../components/Navbar";
+// import NavbarAdmin from "../components/NavbarAdmin";
 import CheckBox from "../components/form/CheckBox";
 
 import dataProduct from "../fakeData/product";
@@ -147,7 +148,7 @@ export default function UpdateProductAdmin() {
 
   return (
     <>
-      <NavbarAdmin title={title} />
+      <Navbar title={title} />
       <hr/>
       <Container className="py-5">
         <Row>
